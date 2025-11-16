@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Cosmetics | Оригинальная премиальная косметика</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 100%;
+            padding: 20px;
+            padding-bottom: 80px;
+        }
+        
+        /* Хедер премиум */
+        .premium-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #000000 0%, #2A2A2A 100%);
+            border-bottom: 1px solid #D4AF37;
+            margin-bottom: 30px;
+        }
+        
+        .premium-header h1 {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            color: #D4AF37;
+        }
+        
+        .premium-header .subtitle {
+            font-size: 14px;
+            letter-spacing: 2px;
+            opacity: 0.8;
+        }
+        
+        /* Бренды */
+        .brands-section {
+            margin-bottom: 40px;
+        }
+        
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .brand-card {
+            background: #1A1A1A;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        
+        .brand-card:hover {
+            border-color: #D4AF37;
+            transform: translateY(-2px);
+        }
+        
+        .brand-logo {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        /* Премиум товары */
+        .product-card-premium {
+            background: #1A1A1A;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+        }
+        
+        .product-image {
+            height: 200px;
+            background: #2A2A2A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .brand-name {
+            color: #D4AF37;
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        
+        .product-name {
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .product-description {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .price-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .price {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .add-to-cart-premium {
+            background: #D4AF37;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .add-to-cart-premium:hover {
+            background: #E6C158;
+        }
+        
+        /* Премиум навигация */
+        .premium-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #000;
+            border-top: 1px solid #333;
+            display: flex;
+            padding: 15px;
+        }
+        
+        .nav-item {
+            flex: 1;
+            text-align: center;
+            color: #666;
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-item.active {
+            color: #D4AF37;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Премиум хедер -->
+        <header class="premium-header">
+            <h1>LUXE COSMETICS</h1>
+            <div class="subtitle">ORIGINAL PREMIUM BEAUTY</div>
+        </header>
+
+        <!-- Бренды -->
+        <section class="brands-section">
+            <h3>🛍️ Наши бренды</h3>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <div class="brand-logo">⚜️</div>
+                    <div>La Mer</div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">🎭</div>
+                    <div>Chanel</div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">👑</div>
+                    <div>Dior</div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">🌟</div>
+                    <div>Estée Lauder</div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">💎</div>
+                    <div>La Prairie</div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">🌹</div>
+                    <div>Guerlain</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Премиум товары -->
+        <section>
+            <h3>🌟 Бестселлеры</h3>
+            
+            <!-- Товар 1 -->
+            <div class="product-card-premium">
+                <div class="product-image">🧴</div>
+                <div class="product-info">
+                    <div class="brand-name">LA MER</div>
+                    <div class="product-name">The Moisturizing Cream</div>
+                    <div class="product-description">Легендарный крем с миракле брот. Восстанавливает кожу за 24 часа.</div>
+                    <div class="price-section">
+                        <div class="price">42 500 ₽</div>
+                        <button class="add-to-cart-premium">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Товар 2 -->
+            <div class="product-card-premium">
+                <div class="product-image">💄</div>
+                <div class="product-info">
+                    <div class="brand-name">CHANEL</div>
+                    <div class="product-name">Rouge Coco Bloom</div>
+                    <div class="product-description">Увлажняющая помада с маслом жожоба. 12 часов комфорта.</div>
+                    <div class="price-section">
+                        <div class="price">4 200 ₽</div>
+                        <button class="add-to-cart-premium">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Товар 3 -->
+            <div class="product-card-premium">
+                <div class="product-image">👁️</div>
+                <div class="product-info">
+                    <div class="brand-name">DIOR</div>
+                    <div class="product-name">Capture Totale Serum</div>
+                    <div class="product-description">Омолаживающая сыворотка с 97% натуральных ингредиентов.</div>
+                    <div class="price-section">
+                        <div class="price">18 900 ₽</div>
+                        <button class="add-to-cart-premium">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Премиум навигация -->
+    <nav class="premium-nav">
+        <a href="#" class="nav-item active">🏠</a>
+        <a href="#" class="nav-item">🔍</a>
+        <a href="#" class="nav-item">🛒</a>
+        <a href="#" class="nav-item">👤</a>
+        <a href="#" class="nav-item">💬</a>
+    </nav>
+
+    <script>
+        // Корзина для премиум магазина
+        let cart = [];
+        let total = 0;
+        
+        document.querySelectorAll('.add-to-cart-premium').forEach(button => {
+            button.addEventListener('click', function() {
+                const productCard = this.closest('.product-card-premium');
+                const brand = productCard.querySelector('.brand-name').textContent;
+                const name = productCard.querySelector('.product-name').textContent;
+                const price = productCard.querySelector('.price').textContent;
+                
+                const product = {
+                    brand: brand,
+                    name: name,
+                    price: price,
+                    id: Date.now()
+                };
+                
+                cart.push(product);
+                
+                // Премиум уведомление
+                showPremiumNotification(`${brand} ${name} добавлен в корзину`);
+                updateCartCounter();
+            });
+        });
+        
+        function showPremiumNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #D4AF37;
+                color: #000;
+                padding: 15px 25px;
+                border-radius: 25px;
+                font-weight: 600;
+                z-index: 1000;
+                animation: slideDown 0.3s ease;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+        
+        function updateCartCounter() {
+            // Здесь можно обновить счетчик корзины
+            console.log('Товаров в корзине:', cart.length);
+        }
+    </script>
+</body>
+</html>
